@@ -1,6 +1,13 @@
 pipeline{
         agent any
-        stages{
+        stages{    
+             stage('Setup') {
+                steps {
+                   dir ('chaperootodo_client') {
+                       deleteDir()
+                }
+            }
+
              stage('Git clone'){
                 steps{
                     sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"

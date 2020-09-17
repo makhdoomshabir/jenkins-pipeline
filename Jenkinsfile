@@ -7,6 +7,7 @@ pipeline{
                        deleteDir()
                 }
             }
+       }            
 
              stage('Git clone'){
                 steps{
